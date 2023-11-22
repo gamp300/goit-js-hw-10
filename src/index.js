@@ -6,21 +6,19 @@ const loader = document.querySelector(`.loader`);
 function breeds() {
   fetch(
     `https://api.thecatapi.com/v1/breeds?api_key=live_2K884JQZCQr2cI8Fe8NmWaiQvi93eiqvRjuVeQwbUvGLwP5IqxcHs3hKXxjDW2qr`
-  ).then(response => {
-    response
-      .json()
-      .then(data => {
-        data.map(breed => {
-          select.innerHTML += `<option value=${breed.reference_image_id}>${breed.name}</option>`;
-        });
-        console.log(data);
-        return data;
-      })
-      .catch(error => {
-        catInfo.innerHTML = `<p class="error">Error: ${error}</p>`;
-        console.log(error);
+  )
+    .then(response => response.json())
+    .then(data => {
+      data.map(breed => {
+        select.innerHTML += `<option value=${breed.reference_image_id}>${breed.name}</option>`;
       });
-  });
+      console.log(data);
+      return data;
+    })
+    .catch(error => {
+      catInfo.innerHTML = `<p class="error">Ha ocurrido un error: ${error}</p>`;
+      console.log(error);
+    });
 }
 
 const dataAPI = breeds();
