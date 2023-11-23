@@ -31,12 +31,12 @@ select.addEventListener(`change`, event => {
         console.log(data);
 
         catInfo.innerHTML = `
-      <img class="cat-info__cat-image" src=${data.url} alt = "" />
+      <img class="cat-info cat-image" src=${data.url} alt = "" />
       <div class="cat-description">
-      <h2 class="cat-description__cat-bread>${data.breeds[0].name}"</h2>
-      <p class="cat-description__cat-temperament">${data.breeds[0].description}</p>
-      <h3 class="cat-description__cat-temperament">Temperament</h3>
-      <p class="cat-description__cat-temperament">${data.breeds[0].temperament}</p>
+      <h2 class="cat-description cat-bread>${data.breeds[0].name}"</h2>
+      <p class="cat-description cat-temperament">${data.breeds[0].description}</p>
+      <h3 class="cat-description cat-temperament">Temperament</h3>
+      <p class="cat-description cat-temperament">${data.breeds[0].temperament}</p>
       </div>`;
       });
     })

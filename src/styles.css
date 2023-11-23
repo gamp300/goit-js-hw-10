@@ -1,0 +1,44 @@
+select {
+  margin: 40px 100px 0px;
+}
+
+.cat-info {
+  width: 630px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.cat-image {
+  max-height: 300px;
+  max-width: 200px;
+  margin-top: 70px;
+  border-radius: 12px;
+}
+
+.error {
+  margin: 40px 100px 0px;
+}
+
+.cat-description,
+.cat-temperament {
+  display: flex;
+  margin-top: 60px;
+  flex-direction: column;
+}
+
+.loader {
+  display: none;
+  width: 48px;
+  height: 48px;
+  border: 2px solid #6d6d6d;
+  border-radius: 50px;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
